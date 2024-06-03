@@ -1,22 +1,12 @@
 package desafio;
 
-public class Curso {
-    private final String titulo;
-    private final String descricao;
+public class Curso extends Conteudo {
+
     private final int cargaHoraria;
 
-    public Curso(String titulo, String descricao, int cargaHoraria) {
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.cargaHoraria = cargaHoraria;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
+    public Curso(String titulo, String descricao, int carga) {
+        super(titulo, descricao); // Chama o construtor da superclasse
+        this.cargaHoraria = carga;
     }
 
     public int getCargaHoraria() {
@@ -24,11 +14,17 @@ public class Curso {
     }
 
     @Override
+    public double calcularXP() {
+        return XP_PADRAO * cargaHoraria;
+    }
+
+    @Override
     public String toString() {
         return "Curso : { " +
-                " titulo = '" + titulo + '\'' +
-                ", descricao = '" + descricao + '\'' +
-                ", cargaHoraria = " + cargaHoraria + " Horas."+
+                " titulo = '" + getTitulo() + '\'' +
+                ", descricao = '" + getDescricao() + '\'' +
+                ", cargaHoraria = " + cargaHoraria + " Horas." +
                 '}';
     }
+
 }

@@ -2,23 +2,18 @@ package desafio;
 
 import java.time.LocalDate;
 
-public class Mentoria {
-    private final String titulo;
-    private final String descricao;
+public class Mentoria extends Conteudo {
+
     private final LocalDate data;
 
-    public Mentoria(String descricao, String titulo, LocalDate data) {
-        this.descricao = descricao;
-        this.titulo = titulo;
-        this.data = data;
+    public Mentoria(String titulo, String descricao, LocalDate carga) {
+        super(titulo, descricao); // Chama o construtor da superclasse
+        this.data = carga;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
+    @Override
+    public double calcularXP() {
+        return XP_PADRAO + 20d;
     }
 
     public LocalDate getData() {
@@ -28,9 +23,10 @@ public class Mentoria {
     @Override
     public String toString() {
         return "Mentoria: { " +
-                "titulo = '" + titulo + '\'' +
-                ", descricao = '" + descricao + '\'' +
+                "titulo = '" + getTitulo() + '\'' +
+                ", descricao = '" + getDescricao() + '\'' +
                 ", data = " + data +
                 '}';
     }
+
 }
