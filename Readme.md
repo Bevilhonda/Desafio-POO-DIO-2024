@@ -11,7 +11,7 @@
 <p>
 ✅ Conhecer a sintaxe da Java<br>
 ✅ Java JDK 11<br>
-✅ IDE para desenvolvimento Java (usarei IntelliJ)<br>
+✅ IDE para desenvolvimento Java (Eu usei o IntelliJ)<br>
 ✅ Git<br>
 ✅ Conta no GitHub<br>
 </p>
@@ -139,12 +139,7 @@ Vejamos alguns Subparadigmas do Paradigma Declarativo e exemplos linguagens de p
 <p>
 Este repositório foi criado para fins de estudo.<br>
 <br>
-Se possível:<br>
-⭐️  Star o projeto<br>
-🐛 Encontrar e relatar issues<br>
 </p>
-
-
 
 ------------
 
